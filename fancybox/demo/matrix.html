@@ -1,0 +1,114 @@
+<!-- Created by Captain Cat-->
+
+<html>
+    <head>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="../lib/jquery-1.10.2.min.js"></script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="../lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="../source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <style>
+            
+            /*basic reset */
+            
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {background: black;}
+            canvas {display:block;}
+        
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+         $(".various").fancybox({
+        maxWidth    : 800,
+        maxHeight   : 600,
+        fitToView   : false,
+        width       : '70%',
+        height      : '70%',
+        autoSize    : false,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
+});
+        </script>
+    </head>
+    <body>
+
+    
+        <canvas id="c"></canvas>
+        
+        <script>
+        // geting canvas by id c
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+        //Construyendo Canvas en Pantalla completa
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //Declarando las letras para mostrar
+        var matrix = "FERNANDOLUISXSUPERSTHEGREATBOOSTHAHALUIS";
+        //Convirtiendo la cadena de texto en un array.
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = c.width/font_size; //numero de columnas para la lluvia de letras
+        //un conjunto de gotas - una por columna
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+        //drawing the characters
+        function draw()
+        {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#0F0"; //green text
+            ctx.font = font_size + "px arial";
+            //looping over drops
+            for(var i = 0; i < drops.length; i++)
+            {
+                //a random chinese character to print
+                var text = matrix[Math.floor(Math.random()*matrix.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
+        
+        </script>
+      <iframe src="https://jawcloud.co/embed-rv6ka2h5b3us.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="100%" height="100%" allowfullscreen="" ></iframe>
+     <a href="https://jawcloud.co/n3wrwaaddd8z.html" target=_blank><img src="https://s9.jawcloud.co/i/02/00028/n3wrwaaddd8z_t.jpg"><br>VID 20170901 WA0030</a><br>[640x376, 02:04]
+   <iframe class="d5WQJ" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media" title="" width="678" height="382" src=";html5=1&amp;ps=picasaweb&amp;use_native_controls=0&amp;enablecastapi=0&amp;color=white&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fphotos.google.com&amp;widgetid=1" ></iframe>
+
+
+   <a title="Ver video" href="javascript:void(0);" onclick="window.open('https://drive.google.com/file/d/1KAjMxVKJGP0ZZyFKcEvjD4eQe4zVpjMe/view', 'popup', 'left=390, top=200, width=425, height=344, toolbar=0, resizable=1')"><img src="http://lh3.googleusercontent.com/-IeqEs27wqEg/UQ6JwsAS31I/AAAAAAAAIhw/my5EpfQu2MA/s91/playvideoicon.gif" title="Ver video" /></a>
+
+
+        <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1KAjMxVKJGP0ZZyFKcEvjD4eQe4zVpjMe/preview"><img src="http://s3-eu-west-1.amazonaws.com/cinemania-cdn/wp-content/uploads/2018/05/11131658/Esta-es-la-sinopsis-oficial-de-Deadpool-2-Atomix-3-660x372.jpg" alt=""  /></a>
+
+    </body>
+</html>

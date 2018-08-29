@@ -12,24 +12,28 @@
     <link rel="icon" href="ico.ico">
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="fancybox/lib/jquery-1.10.2.min.js"></script>
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
-      $(document).ready(function() {
-        $(".various").fancybox({
-          maxWidth  : 800,
-          maxHeight : 600,
-          fitToView : false,
-          width   : '70%',
-          height    : '70%',
-          autoSize  : false,
-          closeClick  : false,
-          openEffect  : 'none',
-          closeEffect : 'none'
-          });
-        });
-    </script>
+    $(document).ready(function() {
+         $(".various").fancybox({
+        maxWidth    : 800,
+        maxHeight   : 500,
+        fitToView   : true,
+        //width       : '50%',
+        //height      : '50%',
+        autoSize    : true,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+       });
+    });
+  </script>
     
   </head>
   <body>
@@ -79,7 +83,7 @@
         <div class="col-md-4">
              <div class="card"><i>DeadPool 2(2018)</i>
                 <div class="card-body">
-                  <a class="various" data-fancybox-type="iframe" rel="fancybox-thumb" href="https://drive.google.com/file/d/1-aOdqgV9D_rmJcxTAkCMccVe5bqEu_yt/preview"><img src="http://s3-eu-west-1.amazonaws.com/cinemania-cdn/wp-content/uploads/2018/05/11131658/Esta-es-la-sinopsis-oficial-de-Deadpool-2-Atomix-3-660x372.jpg" alt=""  width="100%" /></a>
+                  <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1-aOdqgV9D_rmJcxTAkCMccVe5bqEu_yt/preview"><img src="http://s3-eu-west-1.amazonaws.com/cinemania-cdn/wp-content/uploads/2018/05/11131658/Esta-es-la-sinopsis-oficial-de-Deadpool-2-Atomix-3-660x372.jpg" alt=""  width="100%" /></a>
                    <!--iframe width="100%" height="180" src="https://drive.google.com/file/d/1-aOdqgV9D_rmJcxTAkCMccVe5bqEu_yt/preview" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen=""></iframe--> 
                 </div>
              </div>
@@ -183,9 +187,9 @@
           </div>
        </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="js/jquery-3.2.1.min.js"></script>
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+    <script src="js/jquery-3.2.1.min.js"></script-->
+    
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.0.0.js"></script>
