@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script type="text/javascript">
     $(document).ready(function() {
+        $('.fancybox').fancybox();
          $(".various").fancybox({
         maxWidth    : 640,
         maxHeight   : 400,
@@ -66,21 +67,30 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"> <a class="nav-link" href="#videos">Videos►<span class="sr-only">(current)</span></a> </li>
+            <!--li class="nav-item active"> <a class="nav-link" href="#videos">Videos►<span class="sr-only">(current)</span></a> </li-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ╚PLAY ►
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="#pelis">Peliculas</a>
+                   <a class="dropdown-item" href="#series">Series</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="fancybox" href="#inline1">Clik ☻</a>
+                </div>
+
+                <div id="inline1" style="width:400px;display: none;">
+                  <h3>Claro pi Señorhs</h3>
+                  <p>
+                    Que fue Porky-spin xD <a href="#salir">exit</a>
+                  </p>
+                </div>
+
+             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#musica">Musica♫</a>
              </li>
-             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" href="#">Action</a>
-                   <a class="dropdown-item" href="#">Another action</a>
-                   <div class="dropdown-divider"></div>
-                   <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-             </li>
+             
              <li class="nav-item">
                 <a class="nav-link disabled" href="https://github.com/luisxsuper">Disabled</a>
              </li>
@@ -97,12 +107,12 @@
       <p class="lead">Ve todo xD</p>
       <hr class="my-4"><iframe src="matrix.html" frameborder="0" scrolling="no" width="100%" height="100"></iframe>
 	</div>
-	  
+	  <h4 id="videos">Videos ►</h4>
   <div class="container" > 
-		<h5 id="videos">Videos-Pelis ►</h5>
+		  <h5 id="pelis">→Peliculas</h5>
        <div class="row">
         
-        <div class="col-md-4">
+        <div class="col-md-4" id="dead1">
              <div class="card"><i>DeadPool 2(2018)</i>
                 <div class="card-body">
                   <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1-aOdqgV9D_rmJcxTAkCMccVe5bqEu_yt/preview"><img src="http://s3-eu-west-1.amazonaws.com/cinemania-cdn/wp-content/uploads/2018/05/11131658/Esta-es-la-sinopsis-oficial-de-Deadpool-2-Atomix-3-660x372.jpg" alt=""  width="100%" /></a>
@@ -174,8 +184,41 @@
              </div>
           </div>
 
-       </div>
-		
+        </div><!--FIN-->
+        <br class="my-4">
+        <h5 id="series">→Series xD</h5>
+        <div class="row">
+
+          <div class="col-md-4">
+             <div class="card"><i>Final Space(2018-E1)</i>
+                <div class="card-body">
+                   <a class="fancybox"  href="#fianls"><img src="https://www.metagalaxia.com.br/wp-content/uploads/2018/07/finalspace02.jpg" alt=""  width="100%" height="100%" /></a> 
+                </div>
+             </div>
+          </div>
+
+          <div id="fianls" style="width:100%;display: none;">
+            <h3>Final Space <h4><a class="various" data-fancybox-type="iframe" href="https://www.youtube.com/embed/ma708tT-sJs">►Avance◄</a></h4></h3> <!-- li{<a href="">→Cap $</a>}*5 -->
+            <ul>
+              <li>
+                <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1nD1JdKWH_ln_ZJ8VlP9w6zXr1sMS7i-2/preview"><h4 class="btn-outline-success">→Cap 1</h4></a>
+              </li>
+              <li>
+                <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1kvDQAbf7hLwF6Y-nFcmZYQs2v5s-ti3X/preview"><h4 class="btn-outline-success">→Cap 2</h4></a>
+              </li>
+              <li>
+                <a class="various" data-fancybox-type="iframe" href="https://drive.google.com/file/d/1lB7eoXh-W1BXmGVHUDR_LYry7BPpr0yS/preview"><h4 class="btn-outline-success">→Cap 3</h4></a>
+              </li>
+              <li>
+                <a class="various" data-fancybox-type="iframe" href=""><h4 class="btn-outline-success">→Cap 4</h4></a>
+              </li>
+              <li>
+                <a class="various" data-fancybox-type="iframe" href=""><h4 class="btn-outline-success">→Cap 5</h4></a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
        <hr class="my-4">
 
 		<h5 id="musica">Musica ♫</h5>
