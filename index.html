@@ -65,6 +65,45 @@
 
     });
   </script>
+  <style type="text/css">
+    .text {
+      font-size:16px;
+      font-family:helvetica;
+      font-weight:bold;
+      color:#71d90b;
+      text-transform:uppercase;
+    }
+    .parpadea {
+      
+      animation-name: parpadeo;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      -webkit-animation-name:parpadeo;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    @-moz-keyframes parpadeo{  
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+
+    @-webkit-keyframes parpadeo {  
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+       100% { opacity: 1.0; }
+    }
+
+    @keyframes parpadeo {  
+      0% { opacity: 1.0; }
+       50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+  </style>
     
   </head>
   <body>
@@ -177,7 +216,7 @@
           </div>
           
           <div class="col-md-4">
-             <div class="card"><i>Jurassic World:El reino caído(2018)</i>
+             <div class="card"><i>Jurassic World:El reino caído(2018) <i class="parpadea text">New</i></i>
                 <div class="card-body">
                    <a class="various" data-fancybox-type="iframe" href="https://jawcloud.co/embed-1488tar7ukau.html"><img src="https://cdn.images.express.co.uk/img/dynamic/36/590x/Jurassic-World-2-first-video-with-Chris-Pratt-883512.jpg" alt=""  width="100%" /></a> 
                 </div>
